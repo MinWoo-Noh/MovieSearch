@@ -17,6 +17,11 @@ class IntroActivity : AppCompatActivity() {
     }
 
     private fun startActivity(){
+        /* TODO Intro start 시 분기처리
+            0. Intro 에서 넘어갈땐 5초 달레이
+            1. 로그인이 돼어있는 경우 검색(메인)화면 (자동 로그인 기능구현)
+            2. 로그인이 안 돼어있으면 로그인 화면으로 이동
+        */
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             finish()
